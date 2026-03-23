@@ -3,12 +3,9 @@ import { Navigate, Outlet } from "react-router-dom";
 const AdminRoute = () => {
   const user = JSON.parse(localStorage.getItem("user") || "{}");
 
-  if (!user?.role) {
-    return <Navigate to="/login" />;
-  }
-
-  if (user.role !== "ADMIN") {
-    return <Navigate to="/login" />;
+  // ✅ Check role is ADMIN
+  if (!user || user.role !== "ADMIN") {
+    return <Navigate to="/login" replace />;
   }
 
   return <Outlet />;
