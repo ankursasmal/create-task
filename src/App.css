@@ -1,1 +1,97 @@
- 
+ .card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.task-card {
+  background: #13131e;
+  border: 1px solid #1e1e32;
+  border-radius: 14px;
+  padding: 16px;
+  transition: 0.3s;
+}
+
+.task-card:hover {
+  transform: translateY(-4px);
+  border-color: #2a2a44;
+}
+
+/* Header */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #4f46e520, #0d948820);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #7070b0;
+}
+
+.card-header h4 {
+  margin: 0;
+  font-size: 14px;
+  color: #fff;
+}
+
+.user-id {
+  font-size: 11px;
+  color: #44446a;
+}
+
+/* Status */
+.status {
+  margin-left: auto;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 20px;
+}
+
+.status.online {
+  color: #22c55e;
+}
+
+.status.offline {
+  color: #ef4444;
+}
+
+/* Body */
+.card-body {
+  font-size: 12px;
+  color: #8888aa;
+  margin-bottom: 12px;
+}
+
+/* Footer */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question-badge {
+  background: #1e293b;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  color: #38bdf8;
+}
+
+.card-footer button {
+  background: linear-gradient(135deg, #4f46e5, #0ea5e9);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
